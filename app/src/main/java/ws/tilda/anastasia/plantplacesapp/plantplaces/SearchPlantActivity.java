@@ -1,7 +1,9 @@
-package ws.tilda.anastasia.plantplacesapp;
+package ws.tilda.anastasia.plantplacesapp.plantplaces;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import ws.tilda.anastasia.plantplacesapp.R;
 
 public class SearchPlantActivity extends AppCompatActivity {
 
