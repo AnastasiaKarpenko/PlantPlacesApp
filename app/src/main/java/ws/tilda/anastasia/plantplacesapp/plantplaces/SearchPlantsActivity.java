@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import ws.tilda.anastasia.plantplacesapp.R;
 
-public class SearchPlantActivity extends AppCompatActivity {
+public class SearchPlantsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search_plant);
+        setContentView(R.layout.activity_search_plants);
     }
 }
