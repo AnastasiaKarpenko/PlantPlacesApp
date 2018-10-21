@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PlantPlacesApp</string>
+    <string name="plant_name_hint">Plant Name</string>
+    <string name="search_btn_text">Search</string>
 </resources>
