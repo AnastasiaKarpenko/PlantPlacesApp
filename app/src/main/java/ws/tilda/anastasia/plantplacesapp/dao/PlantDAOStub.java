@@ -1,0 +1,31 @@
+package ws.tilda.anastasia.plantplacesapp.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import ws.tilda.anastasia.plantplacesapp.dto.PlantDTO;
+
+public class PlantDAOStub implements IPlantDAO {
+    @Override
+    public List<PlantDTO> fetchPlants(String filter) {
+        List<PlantDTO> allPlants = new ArrayList<>();
+
+        PlantDTO plant = new PlantDTO();
+        plant.setGenus("Cercis");
+        plant.setSpecies("canadensis");
+        plant.setCommon("Eastern Redbud");
+        plant.setSize(30);
+        plant.setFallColor("Yellowish");
+        plant.setType("tree");
+        allPlants.add(plant);
+
+        PlantDTO flower = new PlantDTO();
+        flower.setGenus("Tropoleum");
+        flower.setSpecies("spp");
+        flower.setCommon("Nasturitium");
+        allPlants.add(flower);
+        flower.setType("flower");
+
+        return allPlants;
+    }
+}
