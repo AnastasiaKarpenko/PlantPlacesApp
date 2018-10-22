@@ -3,14 +3,16 @@ package ws.tilda.anastasia.plantplacesapp.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import ws.tilda.anastasia.plantplacesapp.dto.FlowerDTO;
 import ws.tilda.anastasia.plantplacesapp.dto.PlantDTO;
+import ws.tilda.anastasia.plantplacesapp.dto.TreeDTO;
 
 public class PlantDAOStub implements IPlantDAO {
     @Override
     public List<PlantDTO> fetchPlants(String filter) {
         List<PlantDTO> allPlants = new ArrayList<>();
 
-        PlantDTO plant = new PlantDTO();
+        TreeDTO plant = new TreeDTO();
         plant.setGenus("Cercis");
         plant.setSpecies("canadensis");
         plant.setCommon("Eastern Redbud");
@@ -19,7 +21,7 @@ public class PlantDAOStub implements IPlantDAO {
         plant.setType("tree");
         allPlants.add(plant);
 
-        PlantDTO flower = new PlantDTO();
+        PlantDTO flower = new FlowerDTO();
         flower.setGenus("Tropoleum");
         flower.setSpecies("spp");
         flower.setCommon("Nasturitium");

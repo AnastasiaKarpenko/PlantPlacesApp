@@ -7,8 +7,6 @@ public class PlantDTO {
     private String cultivar;
     private String common;
     private String type;
-    private int size;
-    private String fallColor;
 
     public int getGuid() {
         return guid;
@@ -56,22 +54,6 @@ public class PlantDTO {
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-    public String getFallColor() {
-        return fallColor;
-    }
-
-    public void setFallColor(String fallColor) {
-        this.fallColor = fallColor;
     }
 
     @Override

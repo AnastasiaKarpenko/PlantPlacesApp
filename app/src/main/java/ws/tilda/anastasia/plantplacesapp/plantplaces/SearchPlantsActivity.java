@@ -32,9 +32,7 @@ public class SearchPlantsActivity extends AppCompatActivity {
         List<PlantDTO> plants = plantService.fetchPlants(actPlantName.getText().toString());
 
         for (PlantDTO plant : plants) {
-            String showText = "";
-
-            Toast.makeText(this, showText, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, plant.toString(), Toast.LENGTH_LONG).show();
         }
     }
 }
