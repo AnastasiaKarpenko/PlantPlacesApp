@@ -40,7 +40,7 @@ public class BDDTestPlantDAO {
     }
 
     @Test
-    public void testPlantDAO_fetchShouldREturnGenusQuercusForQuercus() throws IOException, JSONException {
+    public void testPlantDAO_fetchShouldReturnGenusQuercusForQuercus() throws IOException, JSONException {
         givenPlantDAOIsInitialized();
         whenSearchForQuercus();
         thenVerifyAllGenusAreQuercus();
