@@ -39,6 +39,20 @@ public class BDDTestPlantDAO {
         thenVerifyNoResults();
     }
 
+    @Test
+    public void testPlantDAO_fetchShouldREturnGenusQuercusForQuercus() throws IOException, JSONException {
+        givenPlantDAOIsInitialized();
+        whenSearchForQuercus();
+        thenVerifyAllGenusAreQuercus();
+
+    }
+
+    private void thenVerifyAllGenusAreQuercus() {
+        for (PlantDTO plant : plants) {
+            assertEquals("Quercus", plant.getGenus());
+        }
+    }
+
     private void thenVerifyNoResults() {
         int size = plants.size();
         assertEquals(0, size);
