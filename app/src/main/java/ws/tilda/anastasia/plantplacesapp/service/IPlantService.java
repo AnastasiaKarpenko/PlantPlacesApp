@@ -1,5 +1,8 @@
 package ws.tilda.anastasia.plantplacesapp.service;
 
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.List;
 
 import ws.tilda.anastasia.plantplacesapp.dto.PlantDTO;
@@ -16,5 +19,5 @@ public interface IPlantService {
      * @return a list of plants that match search criteria
      */
 
-    List<PlantDTO> fetchPlants(String filter);
+    List<PlantDTO> fetchPlants(String filter) throws IOException, JSONException;
 }

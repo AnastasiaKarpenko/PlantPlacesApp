@@ -1,5 +1,8 @@
 package ws.tilda.anastasia.plantplacesapp.dao;
 
+import org.json.JSONException;
+
+import java.io.IOException;
 import java.util.List;
 
 import ws.tilda.anastasia.plantplacesapp.dto.PlantDTO;
@@ -17,5 +20,5 @@ public interface IPlantDAO {
      * @return a list of plants that contain the given filter in either genus, species, cultivar, or common name
      */
 
-    public List<PlantDTO> fetchPlants(String filter);
+    public List<PlantDTO> fetchPlants(String filter) throws IOException, JSONException;
 }

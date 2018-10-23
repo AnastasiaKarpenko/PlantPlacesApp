@@ -1,11 +1,13 @@
 package ws.tilda.anastasia.plantplacesapp;
 
+import org.json.JSONException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.List;
 
 import ws.tilda.anastasia.plantplacesapp.dao.IPlantDAO;
@@ -33,7 +35,7 @@ public class TestPlantDAO {
 
 
     @Test
-    public void testPlantDAO_searchForRedbudShouldReturnAtLeastOneResult() {
+    public void testPlantDAO_searchForRedbudShouldReturnAtLeastOneResult() throws IOException, JSONException {
         List<PlantDTO> plants = plantDAO.fetchPlants("Redbud");
 
         // assume we don't have a match
@@ -51,7 +53,7 @@ public class TestPlantDAO {
     }
 
     @Test
-    public void testPlantDAO_searchForOakShouldReturnAtLeastOneWhiteOak() {
+    public void testPlantDAO_searchForOakShouldReturnAtLeastOneWhiteOak() throws IOException, JSONException {
         List<PlantDTO> plants = plantDAO.fetchPlants("Oak");
 
         // assume we don't have a match
@@ -69,7 +71,7 @@ public class TestPlantDAO {
     }
 
 
-    public void testPlantDAO_searchForEShouldReturnAtLeastTwoResults() {
+    public void testPlantDAO_searchForEShouldReturnAtLeastTwoResults() throws IOException, JSONException {
         List<PlantDTO> plants = plantDAO.fetchPlants("e");
         int size = plants.size();
         boolean atLeastTwo = size > 2;
