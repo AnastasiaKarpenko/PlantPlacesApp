@@ -23,6 +23,14 @@ public class BDDTestPlantDAO {
         thenVerifyAtLeastOneCercisCanadensis();
     }
 
+    @Test
+    public void testPlantDAO_fetchShouldReturnAtLeastTwoOaksForQuercus() throws IOException, JSONException {
+        givenPlantDAOIsInitialized();
+        whenSearchForQuercus();
+        thenVerifyTwoOaks();
+
+    }
+
     private void givenPlantDAOIsInitialized() {
         plantDAO = new PlantDAO();
     }
@@ -45,5 +53,41 @@ public class BDDTestPlantDAO {
         System.out.println("Test: Running Redbud test");
     }
 
+
+    private void whenSearchForQuercus() throws IOException, JSONException {
+        plants = plantDAO.fetchPlants("Quercus");
+    }
+
+    private void thenVerifyTwoOaks() {
+// assume we don't have a match
+        boolean quercusRoburFound = false;
+        for (PlantDTO plant : plants) {
+            if (plant.getGenus().contains("Quercus") && plant.getSpecies().contains("robur")
+                    && plant.getCommon().contains("Oak")) {
+                quercusRoburFound = true;
+            }
+        }
+        // did we find a quercus?
+        assertTrue(quercusRoburFound);
+
+        System.out.println("Test: Running quercus robur test");
+
+        // assume we don't have a match
+        boolean quercusAlbaFound = false;
+
+        for (PlantDTO plant : plants)
+
+        {
+            if (plant.getGenus().contains("Quercus") && plant.getSpecies().contains("alba")
+                    && plant.getCommon().contains("Oak")) {
+                quercusAlbaFound = true;
+            }
+        }
+
+        // did we find a quercus?
+        assertTrue(quercusAlbaFound);
+
+        System.out.println("Test: Running quercus alba test");
+    }
 
 }
