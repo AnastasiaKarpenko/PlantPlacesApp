@@ -10,6 +10,7 @@ import ws.tilda.anastasia.plantplacesapp.dao.IPlantDAO;
 import ws.tilda.anastasia.plantplacesapp.dao.PlantDAO;
 import ws.tilda.anastasia.plantplacesapp.dto.PlantDTO;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class BDDTestPlantDAO {
@@ -29,6 +30,22 @@ public class BDDTestPlantDAO {
         whenSearchForQuercus();
         thenVerifyTwoOaks();
 
+    }
+
+    @Test
+    public void testPlantDAO_fetchShouldReturnNothingForGibberish() throws IOException, JSONException {
+        givenPlantDAOIsInitialized();
+        whenSearchForGibberish();
+        thenVerifyNoResults();
+    }
+
+    private void thenVerifyNoResults() {
+        int size = plants.size();
+        assertEquals(0, size);
+    }
+
+    private void whenSearchForGibberish() throws IOException, JSONException {
+        plants = plantDAO.fetchPlants("skujapodhsjl");
     }
 
     private void givenPlantDAOIsInitialized() {
