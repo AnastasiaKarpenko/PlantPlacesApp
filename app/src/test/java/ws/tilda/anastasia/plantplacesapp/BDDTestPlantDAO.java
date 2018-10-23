@@ -10,8 +10,9 @@ import ws.tilda.anastasia.plantplacesapp.dao.IPlantDAO;
 import ws.tilda.anastasia.plantplacesapp.dao.PlantDAO;
 import ws.tilda.anastasia.plantplacesapp.dto.PlantDTO;
 
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.empty;
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.Matchers.hasProperty;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
@@ -51,7 +52,7 @@ public class BDDTestPlantDAO {
 
     private void thenVerifyAllGenusAreQuercus() {
         for (PlantDTO plant : plants) {
-            assertEquals("Quercus", plant.getGenus());
+            assertThat(plant, hasProperty("genus", containsString("Quercus")));
         }
     }
 
