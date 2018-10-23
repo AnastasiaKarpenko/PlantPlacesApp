@@ -60,4 +60,13 @@ public class PlantDTO {
     public String toString() {
         return genus + " " + species + " " + cultivar + " " + common + " ";
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        PlantDTO otherPlant = (PlantDTO) obj;
+        if (genus.equals(otherPlant.getGenus())) {
+            return true;
+        }
+            return super.equals(obj);
+    }
 }
