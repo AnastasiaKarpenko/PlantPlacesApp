@@ -1,9 +1,11 @@
-package ws.tilda.anastasia.plantplacesapp.dao;
+package ws.tilda.anastasia.plantplacesapp.plantplaces;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
+
+import ws.tilda.anastasia.plantplacesapp.dao.NetworkDAO;
 
 import static org.junit.Assert.assertEquals;
 
