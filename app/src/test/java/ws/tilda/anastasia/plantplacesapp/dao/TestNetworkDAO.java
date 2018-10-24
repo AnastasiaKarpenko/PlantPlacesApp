@@ -5,8 +5,6 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-import ws.tilda.anastasia.plantplacesapp.dao.NetworkDAO;
-
 import static org.junit.Assert.assertEquals;
 
 public class TestNetworkDAO {
