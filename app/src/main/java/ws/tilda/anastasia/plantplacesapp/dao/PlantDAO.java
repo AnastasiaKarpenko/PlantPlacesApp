@@ -11,6 +11,7 @@ import java.util.List;
 import ws.tilda.anastasia.plantplacesapp.dto.PlantDTO;
 
 public class PlantDAO implements IPlantDAO {
+
     private NetworkDAO networkDAO;
 
     public PlantDAO() {
@@ -52,6 +53,15 @@ public class PlantDAO implements IPlantDAO {
         }
         System.out.println("Foobat");
         return allPlants;
+    }
+
+    public NetworkDAO getNetworkDAO() {
+        return networkDAO;
+    }
+
+    @Override
+    public void setNetworkDAO(NetworkDAO networkDAO) {
+        this.networkDAO = networkDAO;
     }
 
 
