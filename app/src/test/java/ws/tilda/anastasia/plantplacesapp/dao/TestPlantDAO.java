@@ -1,4 +1,4 @@
-package ws.tilda.anastasia.plantplacesapp;
+package ws.tilda.anastasia.plantplacesapp.dao;
 
 import org.json.JSONException;
 import org.junit.After;
@@ -10,8 +10,6 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.List;
 
-import ws.tilda.anastasia.plantplacesapp.dao.IPlantDAO;
-import ws.tilda.anastasia.plantplacesapp.dao.PlantDAOStub;
 import ws.tilda.anastasia.plantplacesapp.dto.PlantDTO;
 
 import static org.junit.Assert.assertTrue;

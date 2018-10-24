@@ -1,4 +1,4 @@
-package ws.tilda.anastasia.plantplacesapp;
+package ws.tilda.anastasia.plantplacesapp.dao;
 
 import org.junit.Test;
 
